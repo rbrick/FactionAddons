@@ -16,7 +16,6 @@ public class FactionAddons extends JavaPlugin {
 
     public HashMap<UUID, Boolean> inFly = new HashMap<UUID, Boolean>();
 
-
     private static FactionAddons instance;
     private FactionManager factionManager;
 
