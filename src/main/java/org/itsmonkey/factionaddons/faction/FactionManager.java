@@ -13,6 +13,7 @@ public class FactionManager {
 
     public File getFactionFile(Player player, String factionId){
         FPlayer fPlayer = FPlayers.getInstance().getByPlayer(player);
+
         return fPlayer.getFaction() == null ?
                 null : new File("plugins/FactionAddons/Factions/" + factionId + ".yml");
     }
