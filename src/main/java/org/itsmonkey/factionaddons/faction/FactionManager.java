@@ -18,6 +18,8 @@ public class FactionManager {
                 null : new File("plugins/FactionAddons/Factions/" + factionId + ".yml");
     }
 
+
+
     public void setFriendlyFire(boolean friendlyFire){
 
         if(friendlyFire){
