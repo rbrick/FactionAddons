@@ -14,21 +14,17 @@ import org.itsmonkey.factionaddons.listeners.PlayerDeathListener;
 import org.itsmonkey.factionaddons.listeners.PlayerInventoryListener;
 import org.itsmonkey.factionaddons.listeners.PlayerMoveListener;
 
-import java.util.HashMap;
-import java.util.UUID;
-
 /**
  * Created by Julio on 11/10/2015.
  */
 public class FactionAddons extends JavaPlugin {
-
-    public HashMap<UUID, Boolean> inFly = new HashMap<UUID, Boolean>();
 
     // Lombok!!
     @Getter private static FactionAddons instance;
     @Getter private FactionManager factionManager;
     @Getter private FactionVault factionVault;
 
+    @Override
     public void onEnable(){
         instance = this;
         this.factionManager = new FactionManager();

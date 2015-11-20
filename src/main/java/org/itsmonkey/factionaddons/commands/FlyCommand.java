@@ -2,7 +2,7 @@ package org.itsmonkey.factionaddons.commands;
 
 import com.massivecraft.factions.cmd.FCommand;
 import com.massivecraft.factions.zcore.util.TL;
-import org.itsmonkey.factionaddons.FactionAddons;
+import org.bukkit.GameMode;
 import org.itsmonkey.factionaddons.utils.StringUtils;
 
 /**
@@ -27,17 +27,11 @@ public class FlyCommand extends FCommand {
             return;
         }
 
-        if(!FactionAddons.getInstance().inFly.containsKey(me.getUniqueId())){
-            FactionAddons.getInstance().inFly.put(me.getUniqueId(), false);
-        }
-
-        if(FactionAddons.getInstance().inFly.get(me.getUniqueId())){
-            FactionAddons.getInstance().inFly.put(me.getUniqueId(), false);
+        if(me.isFlying() && me.getGameMode() != GameMode.CREATIVE){
             msg(StringUtils.color("&aYou have de-activated fly mode!"));
             me.setFlying(false);
             me.setAllowFlight(false);
         } else {
-            FactionAddons.getInstance().inFly.put(me.getUniqueId(), true);
             msg(StringUtils.color("&aYou have activated fly mode!\n You can now fly in your own faction territory"));
             me.setAllowFlight(true);
             me.setFlying(true);
