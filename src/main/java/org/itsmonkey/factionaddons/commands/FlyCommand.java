@@ -34,9 +34,13 @@ public class FlyCommand extends FCommand {
         if(FactionAddons.getInstance().inFly.get(me.getUniqueId())){
             FactionAddons.getInstance().inFly.put(me.getUniqueId(), false);
             msg(StringUtils.color("&aYou have de-activated fly mode!"));
+            me.setFlying(false);
+            me.setAllowFlight(false);
         } else {
             FactionAddons.getInstance().inFly.put(me.getUniqueId(), true);
             msg(StringUtils.color("&aYou have activated fly mode!\n You can now fly in your own faction territory"));
+            me.setAllowFlight(true);
+            me.setFlying(true);
         }
 
 

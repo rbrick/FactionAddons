@@ -7,6 +7,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.itsmonkey.factionaddons.FactionAddons;
+import org.itsmonkey.factionaddons.utils.StringUtils;
 
 /**
  * Created by JMac on 11/19/15.
@@ -18,8 +19,12 @@ public class PlayerMoveListener implements Listener {
         Player player = event.getPlayer();
         FPlayer fPlayer = FPlayers.getInstance().getByPlayer(player);
         if(FactionAddons.getInstance().inFly.get(player.getUniqueId())){
-            //Is in fly mode
-            //Check if they move to territory which does not belong to them
+            if(!fPlayer.isInOwnTerritory()){
+                player.setFlying(false);
+                player.setAllowFlight(false);
+                player.sendMessage(StringUtils.color("&cYou have left your territory and were taken out of fly mode!"));
+                FactionAddons.getInstance().inFly.remove(player.getUniqueId());
+            }
         }
     }
 

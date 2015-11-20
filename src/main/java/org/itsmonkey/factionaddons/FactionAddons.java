@@ -2,6 +2,7 @@ package org.itsmonkey.factionaddons;
 
 import com.massivecraft.factions.P;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.itsmonkey.factionaddons.commands.FlyCommand;
 import org.itsmonkey.factionaddons.commands.FriendlyFireCommand;
 import org.itsmonkey.factionaddons.faction.FactionManager;
 
@@ -26,6 +27,7 @@ public class FactionAddons extends JavaPlugin {
         // Register our commands!!
         {
             P.p.cmdBase.addSubCommand(new FriendlyFireCommand());
+            P.p.cmdBase.addSubCommand(new FlyCommand());
         }
 
     }
