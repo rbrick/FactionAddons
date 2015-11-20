@@ -1,8 +1,8 @@
 package org.itsmonkey.factionaddons;
 
-import org.bukkit.Bukkit;
+import com.massivecraft.factions.P;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.itsmonkey.factionaddons.commands.CommandHandler;
+import org.itsmonkey.factionaddons.commands.FriendlyFireCommand;
 import org.itsmonkey.factionaddons.faction.FactionManager;
 
 /**
@@ -17,7 +17,11 @@ public class FactionAddons extends JavaPlugin {
         instance = this;
         factionManager = new FactionManager();
 
-        Bukkit.getPluginManager().registerEvents(new CommandHandler(), this);
+        // Register our commands!!
+        {
+            P.p.cmdBase.addSubCommand(new FriendlyFireCommand());
+        }
+
     }
 
     public static FactionAddons getInstance(){
