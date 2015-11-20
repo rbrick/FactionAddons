@@ -42,7 +42,7 @@
             <groupId>com.massivecraft</groupId>
             <artifactId>Factions</artifactId>
             <version>1.6.9.5-U0.1.18</version>
-            <scope>provided</scope>
+            <scope>system</scope>
             <systemPath>${project.basedir}/lib/Factions.jar</systemPath>
         </dependency>
 

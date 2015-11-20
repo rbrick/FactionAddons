@@ -11,7 +11,7 @@ import java.util.ArrayList;
  */
 public class CommandHandler implements Listener {
 
-    private ArrayList<FCommand> commands = new ArrayList<FCommand>();
+    private ArrayList<DeprecatedFCommand> commands = new ArrayList<DeprecatedFCommand>();
 
     public CommandHandler(){
         commands.add(new FriendlyFireCommand());
@@ -23,7 +23,7 @@ public class CommandHandler implements Listener {
 
         if(!args[0].equalsIgnoreCase("/f")) return;
 
-        for(FCommand command : commands){
+        for(DeprecatedFCommand command : commands){
 
             if(args[1].equalsIgnoreCase(command.getCommand())){
                 event.setCancelled(true);
