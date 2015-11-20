@@ -17,6 +17,11 @@ public class FlyCommand extends FCommand {
     @Override
     public void perform() {
 
+        if(args.size() != 1){
+            me.sendMessage(StringUtils.color("&cUsage: /f fly"));
+            return;
+        }
+
         if(myFaction == null){
             msg(StringUtils.color("&cYou need to be part of a faction to perform this command!"));
             return;
