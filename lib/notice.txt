@@ -1,0 +1,2 @@
+For Development:
+Put your copy of drtshock's Faction plugin in this folder.

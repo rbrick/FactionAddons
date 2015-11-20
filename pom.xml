@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.itsmonkey</groupId>
-    <artifactId>factionaddons</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0</version>
+    <artifactId>FactionsAddon</artifactId>
+    <packaging>jar</packaging>
+    <version>0.0.1-ALPHA</version>
 
     <!-- Repositories -->
     <repositories>
@@ -36,6 +36,14 @@
             <artifactId>lombok</artifactId>
             <version>1.16.6</version>
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.massivecraft</groupId>
+            <artifactId>Factions</artifactId>
+            <version>1.6.9.5-U0.1.18</version>
+            <scope>provided</scope>
+            <systemPath>${project.basedir}/lib/Factions.jar</systemPath>
         </dependency>
 
     </dependencies>
