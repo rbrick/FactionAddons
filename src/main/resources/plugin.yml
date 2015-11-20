@@ -1,0 +1,5 @@
+name: FactionAddons
+version: 0.0.1
+description: A plugin that adds different features onto FactionsUUID
+depends: [Factions]
+main: org.itsmonkey.factionaddons
