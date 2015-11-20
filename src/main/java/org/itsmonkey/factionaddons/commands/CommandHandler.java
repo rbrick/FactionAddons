@@ -9,12 +9,13 @@ import java.util.ArrayList;
 /**
  * Created by Julio on 11/10/2015.
  */
+@Deprecated
 public class CommandHandler implements Listener {
 
     private ArrayList<DeprecatedFCommand> commands = new ArrayList<DeprecatedFCommand>();
 
     public CommandHandler(){
-        commands.add(new FriendlyFireCommand());
+    //    commands.add(new FriendlyFireCommand());
     }
 
     @EventHandler
